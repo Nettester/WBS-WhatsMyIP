@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import ComparativeTime from './Components/ComparativeTime';
+import Map from './Components/Map';
+import ShowIP from './Components/ShowIP';
+import UserTime from './Components/UserTime';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="appHeader">
+        <ShowIP />
       </header>
+      <main className="appMain">
+        <div>
+          <Map />
+        </div>
+        <div>
+          <UserTime />
+          <ComparativeTime />
+        </div>
+      </main>
+      <footer className="appFooter">
+        <div>Copyright </div>
+      </footer>    
     </div>
   );
 }
